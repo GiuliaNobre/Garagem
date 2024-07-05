@@ -4,6 +4,7 @@ from .categoria import Categoria
 from .marca import Marca
 
 
+
 class Modelo(models.Model):
     nome = models.CharField(max_length=50)
     marca = models.ForeignKey(Marca, on_delete=models.PROTECT, related_name="modelos", null=True, blank=True)
